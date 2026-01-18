@@ -1,19 +1,27 @@
 export default function BookTestPage() {
   return (
-    <section className="" style={{
-          backgroundImage: "url('/images/lab-services.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}>
-      <div className="max-w-3xl mx-auto  px-6">
-        <h1 className="text-3xl font-bold text-center mb-4">
-          Book a Laboratory Test
-        </h1>
-        <p className="text-center text-blue-700 mb-2">
-          Fill in the form below to schedule your laboratory test
-        </p>
+    <section
+      className="mt-14"
+      style={{
+        backgroundImage: "url('/images/lab-services.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="max-w-3xl mx-auto px-6">
+        {/* HEADER */}
+        <div className="flex flex-col justify-center items-center text-center">
+          <h1 className="text-3xl font-bold text-center pt-2">
+            Book a Laboratory Test
+          </h1>
+          <p className="text-center text-blue-700">
+            Fill in the form below to schedule your laboratory test
+          </p>
+        </div>
 
-        <form className="bg-white rounded-2xl shadow p-8 space-y-6 my-auto">
+        {/* FORM */}
+       <div className="flex justify-center w-full py-8">
+         <form className="bg-white rounded-2xl shadow-xl w-full max-w-md p-8 space-y-4">
           {/* FULL NAME */}
           <div>
             <label className="block text-sm font-medium mb-2">Full Name</label>
@@ -23,6 +31,7 @@ export default function BookTestPage() {
               className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
+
           {/* EMAIL */}
           <div>
             <label className="block text-sm font-medium mb-2">
@@ -46,7 +55,8 @@ export default function BookTestPage() {
               className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          {/* TEST SELECTION */}
+
+          {/* TEST */}
           <div>
             <label className="block text-sm font-medium mb-2">
               Select Test
@@ -69,6 +79,7 @@ export default function BookTestPage() {
               className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
+
           {/* SUBMIT */}
           <button
             type="button"
@@ -77,6 +88,7 @@ export default function BookTestPage() {
             Submit Booking
           </button>
         </form>
+       </div>
       </div>
     </section>
   );
